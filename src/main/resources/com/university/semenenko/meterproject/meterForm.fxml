@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="377.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.university.semenenko.meterproject.Controller.MeterController">
+   <children>
+      <BorderPane prefHeight="30.0" prefWidth="746.0">
+         <top>
+            <Label prefHeight="68.0" prefWidth="404.0" text="Система оплаты счетов по показаниям счетчика" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets top="50.0" />
+               </opaqueInsets>
+            </Label>
+         </top>
+         <bottom>
+            <Line endX="83.42485046386719" endY="-2.7356772422790527" startX="-657.6680908203125" startY="-2.7355027198791504" stroke="#5c6b39" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <center>
+                  <Pane prefHeight="302.0" prefWidth="746.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <TextField fx:id="city" alignment="CENTER" layoutX="279.0" layoutY="39.0" prefHeight="25.0" prefWidth="191.0" />
+                        <Label layoutX="58.0" layoutY="43.0" text="Город" />
+                        <TextField fx:id="name" alignment="CENTER" layoutX="279.0" layoutY="73.0" prefHeight="25.0" prefWidth="191.0" />
+                        <Label layoutX="58.0" layoutY="77.0" text="ФИО плательщика" />
+                        <Label layoutX="58.0" layoutY="142.0" text="Счетчик 1 - предыдущее значение" />
+                        <Label layoutX="58.0" layoutY="178.0" text="Счетчик 1 - нынешнее значение" />
+                        <TextField fx:id="meterBefore1" alignment="CENTER" layoutX="281.0" layoutY="138.0" prefHeight="25.0" prefWidth="188.0" />
+                        <TextField fx:id="meterAfter1" alignment="CENTER" layoutX="280.0" layoutY="174.0" prefHeight="25.0" prefWidth="189.0" />
+                        <Label layoutX="58.0" layoutY="214.0" text="Счетчик 2 - предыдущее значение" />
+                        <TextField fx:id="meterBefore2" alignment="CENTER" layoutX="279.0" layoutY="210.0" prefHeight="25.0" prefWidth="190.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="231.0" layoutX="497.0" layoutY="38.0" stroke="OLIVEDRAB" strokeType="INSIDE" width="207.0" />
+                        <Label layoutX="58.0" layoutY="249.0" text="Счетчик 2 - нынешнее значение" />
+                        <TextField fx:id="meterAfter2" alignment="CENTER" layoutX="280.0" layoutY="245.0" prefHeight="25.0" prefWidth="189.0" />
+                        <Label fx:id="labelDateText" layoutX="517.0" layoutY="78.0" opacity="0.0" text="Дата:" />
+                        <Label fx:id="dateNow" layoutX="624.0" layoutY="78.0" opacity="0.0" text="15.01.2021" />
+                        <Label fx:id="labelMonthText" layoutX="517.0" layoutY="53.0" opacity="0.0" text="Период:" />
+                        <Label fx:id="month" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="640.0" layoutY="56.0" opacity="0.0" text="12.2020" />
+                        <Button fx:id="buttonGetPayment" alignment="CENTER" layoutX="525.0" layoutY="138.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="152.0" style="-fx-background-color: #6B8E23;" text="Получить счет" textFill="WHITE" />
+                        <Line endX="100.0" layoutX="369.0" layoutY="117.0" startX="-312.4000244140625" startY="7.62939453125E-6" stroke="#5a614d" />
+                        <Label fx:id="labelPayment" alignment="CENTER" layoutX="526.0" layoutY="181.0" opacity="0.0" text="Сумма:">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelNumberOfPayment" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="614.0" layoutY="180.0" opacity="0.0" text="75.43" textAlignment="RIGHT">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fioLabelText" layoutX="517.0" layoutY="102.0" opacity="0.0" text="ФИО:" />
+                        <Label fx:id="fioLabel" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="557.0" layoutY="100.0" opacity="0.0" prefHeight="16.0" prefWidth="124.0" textAlignment="RIGHT" />
+                        <Label fx:id="nnLabel1" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="605.0" layoutY="124.0" opacity="0.0" prefHeight="17.0" prefWidth="76.0" textAlignment="RIGHT" />
+                        <Label fx:id="nnLabelText" alignment="TOP_LEFT" layoutX="517.0" layoutY="125.0" opacity="0.0" prefHeight="17.0" prefWidth="83.0" text="Номер счета:" />
+                        <Button fx:id="buttonPay" alignment="CENTER" layoutX="524.0" layoutY="219.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="152.0" style="-fx-background-color: #6B8E23;" text="Оплатить" textFill="WHITE" />
+                        <Label fx:id="failedInputMeterNumLabel" layoutX="508.0" layoutY="83.0" opacity="0.0" prefHeight="42.0" prefWidth="184.0" text="Данные счетчиков введены некоректно попробуйте еще раз" textAlignment="CENTER" textFill="#c11d1d" wrapText="true" />
+                        <Label fx:id="successfulPaymentLabel" layoutX="548.0" layoutY="110.0" opacity="0.0" text="Оплата выполнена" textFill="#237e05" />
+                     </children>
+                  </Pane>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</VBox>
